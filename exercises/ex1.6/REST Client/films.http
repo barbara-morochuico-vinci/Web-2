@@ -1,0 +1,66 @@
+### Read all films
+GET http://localhost:3000/films
+
+
+### read filtered films
+GET http://localhost:3000/films/?minimum-duration=105
+
+@baseUrl = http://localhost:3000
+
+### Read film identified by 2
+GET {{baseUrl}}/films/2
+
+### Create a film
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+    "title":"Weathering with you",
+    "director":"Makoto Shinkai",
+    "duration":114
+}
+
+### Create another film
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+    "title":"Oppenheimer",
+    "director":"Christopher Nolan",
+    "duration":180,
+    "budget":100,
+    "description":"atomic bomb"
+}
+
+### Delete a film
+DELETE {{baseUrl}}/films/4
+
+### Update the film identified by 5
+PATCH {{baseUrl}}/films/5
+Content-Type: application/json
+
+{
+    "description":"BOOM BOOM"
+}
+
+### create a film with put
+PUT {{baseUrl}}/films/7
+Content-Type: application/json
+
+{
+    "title":"Barbie",
+    "director":"Greta Gerwig",
+    "duration":114,
+    "description":"girly pop"
+}
+
+### modify a film with put
+PUT {{baseUrl}}/films/7
+Content-Type: application/json
+
+{
+    "title":"Barbie",
+    "director":"Greta Gerwig",
+    "duration":114,
+    "description":"serious"
+}
