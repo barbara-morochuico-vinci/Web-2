@@ -1,0 +1,33 @@
+### Read all films
+GET http://localhost:3000/films
+
+
+### read filtered films
+GET http://localhost:3000/films/?minimum-duration=105
+
+@baseUrl = http://localhost:3000
+
+### Read film identified by 2
+GET {{baseUrl}}/films/2
+
+### Create a film
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+    "title":"Weathering with you",
+    "director":"Makoto Shinkai",
+    "duration":114
+}
+
+### Create another film
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+    "title":"Oppenheimer",
+    "director":"Christopher Nolan",
+    "duration":180,
+    "budget":100,
+    "description":"atomic bomb"
+}
