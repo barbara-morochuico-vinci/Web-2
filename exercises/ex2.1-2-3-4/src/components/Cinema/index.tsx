@@ -16,7 +16,7 @@ interface Movie {
   
       <ul>
         {props.movies.map((movie) => (
-              <li>{movie.title} - Réalisateur : {movie.director}</li>
+              <li key = {movie.id}>{movie.title} - Réalisateur : {movie.director}</li>
           ))}
       </ul>
       </div>
