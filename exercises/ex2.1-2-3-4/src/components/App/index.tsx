@@ -1,7 +1,11 @@
 import Cinema from "../Cinema";
+import Footer from "../Footer";
+import Header from "../Header";
 import PageTitle from "../PageTitle";
 
 const App = () => {
+  const imageHeader = "https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2luZW1hfGVufDB8fDB8fHww";
+  const imageFooter = "https://plus.unsplash.com/premium_photo-1667425092311-80658bb0c05f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
   const pageTitle = "Informations sur les films dans les cinémas";
 
   const cinema1Name = "UGC DeBrouckère";
@@ -55,11 +59,15 @@ const App = () => {
 
   return (
     <div>
+      <Header url_image={imageHeader} children={undefined} />
+
       <PageTitle title={pageTitle} />
 
       <Cinema name={cinema1Name} movies={moviesCinema1} />
 
       <Cinema name={cinema2Name} movies={moviesCinema2}/>
+
+      <Footer url_image={imageFooter} children={undefined} />
     </div>
   );
 };
