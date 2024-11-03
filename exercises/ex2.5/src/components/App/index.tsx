@@ -19,7 +19,9 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <Counter/>
+        <Counter
+        title='yo'
+        messageAfter10Clicks='You are a master in the art of clicking !'/>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
