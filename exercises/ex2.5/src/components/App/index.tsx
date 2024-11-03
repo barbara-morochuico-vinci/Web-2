@@ -21,7 +21,8 @@ function App() {
       <div className="card">
         <Counter
         title='yo'
-        messageAfter10Clicks='You are a master in the art of clicking !'/>
+        messageAfter10Clicks='You are a master in the art of clicking !'
+        messageWhenHover='Please click on me now !'/>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
