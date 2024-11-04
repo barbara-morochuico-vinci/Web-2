@@ -1,10 +1,5 @@
-import Movie from "../Movie";
-
-interface Movie {
-  title: string;
-  director: string,
-  description : string;
-}
+import MovieItem from "../Movie";
+import Movie from "../../types";
 
   interface CinemaProps {
     name: string;
@@ -18,7 +13,7 @@ interface Movie {
   
       <ul>
         {movies.map((movie) => (
-              <Movie title={movie.title} 
+              <MovieItem title={movie.title} 
               description={movie.description}
               director={movie.director}/>
           ))}

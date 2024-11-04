@@ -1,15 +1,15 @@
 import { useState } from "react";
 
-interface MovieProps {
+interface MovieItemProps {
     title: string;
     director: string,
     description : string;
 }
 
-  const Movie = ({title, director, description} : MovieProps) => {
+  const MovieItem = ({title, director, description} : MovieItemProps) => {
     const [descriptionShown, setDescriptionShown] = useState(false);
 
     return <li onClick={() => setDescriptionShown(!descriptionShown)}> {title} - Réalisateur : {director} {descriptionShown ? description : null}</li>;
   }
 
-  export default Movie;
+  export default MovieItem;
