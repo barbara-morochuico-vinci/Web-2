@@ -150,7 +150,6 @@ const AddMovieForm = () => {
           <button type="submit">Ajouter</button>
         </form>
       </div>
-  );
   </>
 )};
 
