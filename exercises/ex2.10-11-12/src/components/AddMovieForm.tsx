@@ -1,39 +1,35 @@
-import { SyntheticEvent, useState } from 'react';
-import './App.css'
-import Films from './Films'
-
-//c'est pas beau mais c'est fonctionnel
+import { SyntheticEvent, useState } from "react";
+import Films from "./Films";
 
 const defaultFilms = [
-  {
-    title : "Ponyo",
-    director: "Miyazaki le goat",
-    duration : 103
-  },
-  {
-    title : "My Film",
-    director : "Jelly-the-Witch",
-    duration : 150
-  },
-  {
-    title : "Insérer title film3",
-    director : "Insérer directeur film3",
-    duration : 0
-  },
-  {
-    title : "Insérer title film4",
-    director : "Insérer directeur film4",
-    duration : 0
-  },
-  {
-    title : "Insérer title film5",
-    director : "Insérer directeur film5",
-    duration : 0
-  },
-
-]
-
-function App() {
+    {
+      title : "Ponyo",
+      director: "Miyazaki le goat",
+      duration : 103
+    },
+    {
+      title : "My Film",
+      director : "Jelly-the-Witch",
+      duration : 150
+    },
+    {
+      title: "HAIKYU-THE DUMPSTER BATTLE",
+      director: "Susumu Mitsunaka",
+      duration : 3
+    },
+    {
+      title: "INCEPTION",
+        director: "Christopher Nolan",
+      duration : 4
+    },
+    {
+      title: "PARASITE",
+      director: "Bong Joon-ho",
+      duration : 5
+    },
+  
+  ]
+const AddMovieForm = () => {
   
   const [title, setTitle] = useState("");
   const [director, setDirector] = useState("");
@@ -44,6 +40,7 @@ function App() {
   const [films, setFilms] = useState(defaultFilms);
 
   const handleSubmit = (e: SyntheticEvent) => {
+
     e.preventDefault();
     console.log("submit:", title, director, duration, image_url, budget);
     const newFilm = {
@@ -95,7 +92,7 @@ function App() {
 
   return (
     <>
-      <Films films={films} />
+    <Films films={films} />
       <div>
         <br />
         <form onSubmit={handleSubmit}>
@@ -153,8 +150,8 @@ function App() {
           <button type="submit">Ajouter</button>
         </form>
       </div>
-    </>
-  )
-}
+  );
+  </>
+)};
 
-export default App
+export default AddMovieForm;
