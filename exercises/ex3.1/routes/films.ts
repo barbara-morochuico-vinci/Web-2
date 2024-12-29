@@ -14,7 +14,7 @@ const router = Router();
 
 
 router.get("/", (req, res) => {
-  const minDuration = Number(req.query['minimum-duration']);
+  const minDuration = Number(req.query['film']);
   const films = readAllFilms(minDuration);
   return res.json(films);
 });

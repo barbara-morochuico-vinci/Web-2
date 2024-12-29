@@ -1,0 +1,36 @@
+@baseUrl = http://localhost:3000
+
+### Read all comments
+GET {{baseUrl}}/comments
+
+### Read all comments linked to a film
+GET {{baseUrl}}/comments/?filmId=1
+
+### Create a user
+# @name alice
+POST {{baseUrl}}/auths/register
+Content-Type: application/json
+
+{
+    "username":"Alice",
+    "password":"manager"
+}
+
+### Login the manager user
+POST {{baseUrl}}/auths/login
+Content-Type: application/json
+
+{
+    "username":"Alice",
+    "password":"manager"
+}
+
+### Create a comment
+POST {{baseUrl}}/comments
+Content-Type: application/json
+Authorization: {{alice.response.body.token}}
+
+{
+    "comment":"I love this film",
+    "filmId":1
+}
