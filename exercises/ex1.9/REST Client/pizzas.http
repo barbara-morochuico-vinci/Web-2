@@ -21,8 +21,8 @@ POST {{baseUrl}}/pizzas
 Content-Type: application/json
 
 {
-    "title":"Magical girls",
-    "content":"Epinards, Carambole, Dried tomatoes, Feta"
+    "title":"Magic Green",
+    "content":"Epinards, Brocolis, Olives vertes, Basilic"
 }
 
 ### Delete pizza identified by 2
